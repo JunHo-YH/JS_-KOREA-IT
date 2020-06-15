@@ -1,0 +1,14 @@
+- 주석처리
+한 줄 설명 //
+여러 줄 설명 /* */
+
+- 입력 시 주의사항
+대소문자 구별
+ex) var birthDay = New Date(); (x)
+    var birthDay = new Date(); (o) // 반드시 new의 n은 소문자로 적어줘야한다.
+
+    - 실행문 뒤에 시미클론(;)
+    console.log("hi") console.log("bye") (x)
+
+    console.log("hi");
+    console.log("bye"); (0)
