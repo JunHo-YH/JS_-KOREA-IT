@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>변수</title>
+  </head>
+  <body>
+    <script>
+    //문자열 길이 나타내기
+      var str = "Hello";
+      console.log(str);
+      console.log(str.length);
+      console.log(str['length']);
+      console.log("Hello".length)
+
+      //문자열 각각 나타내기
+      var str2 = "JavaScript";
+      console.log(str, str2);
+
+      //문자열 합치기
+      console.log(str + str2);
+      console.log(str.concat(str2));
+      console.log(str.concat(", ").concat(str2).concat("!"));
+      console.log(str + ", " + str2 + "!");
+
+      var prefix = "JavaScript";
+      var suffix = "Programmer";
+      var word = prefix + suffix;
+      var word_length = word.length;
+      // alert("두 문자의 길이의 합은 : " + word_length + "입니다.");
+    </script>
+  </body>
+</html>

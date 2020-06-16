@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var str = "abcdeabcde";
+
+      // 문자(첫 번째 문자)를 기준으로 인덱스 번호 반환하기
+      console.log(str.indexOf("bc"))
+      console.log(str.lastIndexOf("bc"))
+
+      // 없는 값을 출력할 경우 -1 출력
+      console.log(str.indexOf("zxc"));
+
+      console.log(str.length);
+
+      //해당 인덱스 출력하기
+      console.log(str.charAt(0));
+      console.log(str.charAt(9));
+
+      console.log(str[0]);
+
+
+      //해당되지 않는 인덱스를 출력했을 경우
+      //빈 공간 출력
+      console.log(str.charAt(10));
+      console.log(str.charAt(-1));
+
+      //undefined 출력
+      console.log(str[10]);
+      console.log(str[-1]);
+
+
+      //값을 뒤에서 부터 찾을 때
+      console.log(str.charAt(str.length-5));
+
+
+      var str2 = "Hello, JavaScript!";
+      // substring, substr
+      // console.log(str2.substring(시작 인덱스 번호, 자를 범위(인덱스 0부터 시작)))
+      console.log(str2.substring(0, 5));
+
+      console.log(str2.substring(7, 11));
+      console.log(str2.substr(7, 4));
+
+      console.log(str2.substring(7))
+      console.log(str2.substr(7))
+
+      //뒤에서부터 출력
+      console.log(str2.substr(-7));
+      console.log(str2.substr(-7,2));
+
+      // 문자를 기준으로 인덱스 번호 반환(J)
+      console.log(str2.indexOf('Java'))
+
+
+
+    </script>
+
+  </body>
+</html>
