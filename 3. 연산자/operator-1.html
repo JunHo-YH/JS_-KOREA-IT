@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>산술 연산자</title>
+  </head>
+  <body>
+    <script>
+       var a = 5, b = 3;
+       console.log(a + b);
+       console.log(a - b);
+       console.log(a * b);
+       console.log(a / b);
+       console.log(a % b);
+       console.log(-a);
+
+       console.log("===============================")
+
+       //증감연산자
+       var num = 1;
+       console.log(num);
+       console.log(++num);
+       console.log(num++);
+       console.log(num);
+       console.log(num--);
+       console.log(--num);
+       console.log("===============================")
+
+       // 산술연사자를 활용할 수 있는
+       Math.pow(2,3); // 지수 곱 2의 3승
+       Math.sqrt(16); // 제곱근 16 = 4
+       Math.random(); // 0 < x < 1 랜덤값 출력
+
+
+       // 변수처리를 하면 훨씬 빠르게 처리할 수 있다.
+       var a = 100;
+       a = a + 10; // a = 110    a += 10
+       a = a / 10; // a = 11     a /= 10
+       a = a - 10; // a = 1      a -= 10
+       a = a * 10; // a = 10;    a *= 10
+       console.log(a);
+       console.log("===============================")
+
+       /*
+        a = 1일 경우 처리속도 가장 느림
+        a = a + 1
+        a += 1
+        a++일 경우 처리 속도 가장 빠름
+
+       */
+
+
+
+
+    </script>
+
+  </body>
+</html>
