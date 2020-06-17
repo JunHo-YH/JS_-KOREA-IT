@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      var count = 0;
+      myFnc();
+      function myFnc() {
+        count++; // 한 줄의 결과값이 나온 상태이므로 count = 1;
+        document.write("hello" + count,"<br>");
+      }
+
+      myFnc();
+
+      var theFnc = function() {
+        count++;
+        document.write("bye" + count,"<br>");
+      }
+
+      theFnc();
+    </script>
+  </body>
+</html>

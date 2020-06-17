@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      // 선언적 함수
+
+      function test() {
+        console.log("함수를 실행하시오");
+        return;
+      }
+      test(); //함수를 선언한 이후로 함수를 호출해줘야 실행이 된다.
+
+      function test2() {
+        return; //함수를 바로 끝내버리기 때문에 다음 라인은 Dead Code가 된다.
+        console.log("함수2를 실행하시오");
+      }
+      test2();
+
+      console.log("=========================");
+
+      function test3() {
+        console.log("함수3을 실행하시오")
+        test();  //함수 안에서 함수를 호출할 수 있다.
+        console.log("함수3-1을 실행하시오");
+      }
+        test3();
+
+
+        console.log("=========================");
+        // 익명 함수
+        var test4 = function () {
+          console.log("함수4를 실행하시오");
+        }
+        test4();
+
+        function sum1() {
+          var a = 1, b = 2;
+          // return a + b;
+          var c = a + b;
+          return c;
+        }
+        console.log(sum1());
+
+
+        // 매개변수를 갖는 함수
+        function sum2(arg1, arg2) {
+          var sum = arg1 + arg2;
+          return sum;
+        }
+        console.log(sum2(30, 40));
+
+    </script>
+
+  </body>
+</html>

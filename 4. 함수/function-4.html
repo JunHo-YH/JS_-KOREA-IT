@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>전역변수 / 지역변수</title>
+  </head>
+  <body>
+    <script>
+      function getGrade() {
+        var kor = 95;
+      }
+      var kor = 100;
+      getGrade();
+      document.write("국어 점수 : " + kor + "<br>");
+
+      function getGrade2() {
+        kor = 95;
+      }
+      var kor = 100;
+      getGrade2();
+      document.write("국어 점수 : " +  kor + "<br>");
+
+    </script>
+  </body>
+</html>
