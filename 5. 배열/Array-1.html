@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배열문법</title>
+  </head>
+  <body>
+    <script>
+      var fruit1 = new Array('사과', '수박', '딸기', '메론', '참외', '망고', '딸기');
+      console.log(fruit1)
+      console.log(fruit1, typeof(fruit1));
+      console.log(fruit1[0])
+
+      var fruit2 = ['사과', '수박', '딸기', '메론', '참외', '망고', '딸기']
+      console.log(fruit2)
+      document.write(fruit2[3])
+
+      function fruit3 () {
+        return ['사과', '수박', '딸기', '메론', '참외', '망고', '딸기']
+      }
+
+      //함수를 변수에 담아서 추출하기
+      var fruit3 = fruit3();
+      document.write(fruit3[0])
+
+
+    </script>
+
+  </body>
+</html>
