@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>랜덤배경</title>
+  </head>
+  <body>
+      <button onclick="bgColorChange()">배경색상변경</button>
+      <script>
+        function baColorChange() {
+          var colorList = [ 'red', 'blue', 'green', ' purple', 'orange']
+          // 0 - 4 까지의 랜덤정수 출력
+          var num = Math.floor((Math.random() * 5))
+          var body = document.getElementsByTagName("body")[0];
+          body.style.backgroundColor = colorList[num];
+        }
+        baColorChange()
+      </script>
+  </body>
+</html>

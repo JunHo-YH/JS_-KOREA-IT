@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>함수 값 돌려주기</title>
+  </head>
+  <body>
+    <script>
+      function sum1() {
+        var a = 10, b = 20;
+        var c = a + b;
+        return c;
+      }
+      console.log( sum1, sum1());
+      // 함수이름에 ()를 해주는 것과 안해주는 것은 차이가 있다.
+
+
+      function sum3(a, b) {
+        var sum = a + b;
+        return sum;
+      }
+      console.log(sum3(5, 6));
+      console.log(sum3(11, 13));
+
+
+    </script>
+
+  </body>
+</html>
