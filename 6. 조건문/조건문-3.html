@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>연습문제</title>
+  </head>
+  <body>
+    <script>
+        var score  = parseInt(prompt("성적을 입력해주세요."));
+
+          if(score >= 101 || score < 0) {
+            alert("값을 잘못 입력하셨습니다.");
+            score = prompt("1 ~ 100사이의 점수를 다시 입력해주세요.");
+            checkScore();
+          }else if(score >= 90) {
+            alert("아주 잘했어요");
+        }else if (score >= 80) {
+          alert("잘 했어요");
+        }else if (score >= 70) {
+          alert("조금만더 노력하면 잘할 수 있어요.");
+        }else if (score >= 60) {
+          alert("좀 더 노력하세요.");
+        }else {
+          alert("많이 노력하시길 바랍니다.");
+        }
+
+
+        function checkScore() {
+          if(score >= 101 || score < 0) {
+            alert("값을 잘못 입력하셨습니다.");
+            score = prompt("1 ~ 100사이의 점수를 다시 입력해주세요.");
+            checkScore();
+          }else if(score >= 90) {
+            alert("아주 잘했어요");
+        }else if (score >= 80) {
+          alert("잘 했어요");
+        }else if (score >= 70) {
+          alert("조금만더 노력하면 잘할 수 있어요.");
+        }else if (score >= 60) {
+          alert("좀 더 노력하세요.");
+        }else {
+          alert("많이 노력하시길 바랍니다.");
+        }
+        }
+    </script>
+
+  </body>
+</html>

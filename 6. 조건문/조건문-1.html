@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>조건문 기본</title>
+  </head>
+  <body>
+    <script>
+      var a = 10;
+      var b = 20;
+      if (a == b) {
+        console.log("조건이 참입니다.");
+      }
+      var num = 0;
+
+      function total() {
+        num++;
+        document.write(num);
+        if (num == 10 ) {
+          return;
+        }
+        total();
+      }
+      total();
+
+    </script>
+  </body>
+</html>

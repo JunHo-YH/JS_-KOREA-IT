@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset = "UTF-8">
+		<title> 함수 </title>
+		<script>
+			var idName = "korea";
+			var pwNum = "1234";
+
+			function login(id, pw){
+				if ( id == idName && pw === pwNum ){
+					location.href = "loginSuccess_korea.html";
+				}
+				else {
+					if( id != idName) {
+						alert("존재하지 않는 아이디 입니다.");
+					}else if (pw !== pwNum) {
+						alert("잘못된 비밀번호입니다.");
+					}
+				}
+			}
+			var userId = prompt("아이디를 입력해주세요.");
+			var userPw = prompt("비밀번호를 입력해주세요.");
+
+			login(userId, userPw);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

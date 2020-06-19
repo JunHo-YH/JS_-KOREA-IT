@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>파일 연결하기</title>
+  </head>
+  <body>
+    <script>
+      var id, password; // admin, 123456
+      id = prompt("아이디를 입력하시오.");
+      if (id == "admin") {
+        password = prompt("비밀번호를 입력하시오.");
+        if (password === '123456') {
+          location.href = "loginSuccess.html" // location : 다른 파일을 연결할 때 쓰는 명령어
+        }else {
+          location.href = "loginError.html"
+        }
+      }else {
+        location.href = "loginError.html"
+      }
+    </script>
+
+  </body>
+</html>

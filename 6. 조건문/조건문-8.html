@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>갤러리</title>
+    <style>
+      body { text-align: center;}
+      img { widows: 30px; margin-bottom: 50px;}
+
+    </style>
+  </head>
+  <body>
+
+    <img src="../images/pic_1.jpg" alt="이미지" id = "photo">
+    <br>
+    <button>이전</button>
+    <button>다음</button>
+
+    <script>
+      var num = 1;
+
+      var photo = document.getElementById("photo")
+      console.log(photo);
+
+      // img의 src(속성(Attribute))를 변경 = setAttribute
+      photo.setAttribute("src", "images/pic_" + num + ".jpg")
+    </script>
+  </body>
+</html>
