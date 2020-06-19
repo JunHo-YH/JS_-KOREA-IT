@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var greenArr = ["교대", "방배", "강남"];
+      var yellowArr = ["미금", "정자", "수서"];
+
+       greenArr.splice(2, 1, "서초", "역삼"); // 교대,방배,서초,역삼
+
+      //배열에 바로바로 영향을 미친다.
+       var data1 = yellowArr.pop();  //data 1 = 수서
+       var data2 = yellowArr.shift(); // data2 = 미금
+
+       yellowArr.push(data2);  // 정자 미금
+       yellowArr.unshift(data1); // 수서 정자 미금
+       var test = prompt("yellowArr의 최종배열값을 입력하시오");
+       if (test == yellowArr) {
+         alert("정답입니다.");
+       }else {
+         alert("오답입니다.");
+       }
+    </script>
+
+  </body>
+</html>
