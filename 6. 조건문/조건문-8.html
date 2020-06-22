@@ -5,25 +5,42 @@
     <title>갤러리</title>
     <style>
       body { text-align: center;}
-      img { widows: 30px; margin-bottom: 50px;}
+      img { width: 300px; margin-bottom: 50px;}
+      div { height: 400px; }
 
     </style>
   </head>
   <body>
-
+  <div>
     <img src="../images/pic_1.jpg" alt="이미지" id = "photo">
+  </div>
     <br>
-    <button>이전</button>
-    <button>다음</button>
+    <button onclick="gallery()">이전</button>
+    <button onclick="gallery(direct)">다음</button>
 
     <script>
-      var num = 1;
 
+      var num = 1;
+      var direct = 1;
+      function gallery(direct) {
+        if (direct) {
+        if(num >= 9) return;
+        num++;
+      }else {
+        if (num == 1) return;
+        num--;
+        console.log(direct)
+      }
       var photo = document.getElementById("photo")
       console.log(photo);
-
       // img의 src(속성(Attribute))를 변경 = setAttribute
-      photo.setAttribute("src", "images/pic_" + num + ".jpg")
+      photo.setAttribute("src", "../images/pic_" + num + ".jpg");
+
+
+    }
+      // gallery();
+
+
     </script>
   </body>
 </html>
