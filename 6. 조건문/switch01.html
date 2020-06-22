@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Switch</title>
+  </head>
+
+  <body>
+        <h1></h1>
+    <script>
+      var txt = document.getElementsByTagName("h1")[0];
+      console.log(txt);
+      var fruit = prompt("좋아하는 과일을 입력하세요", "");
+      switch (fruit) {
+        case "사과" :
+        txt.innerText = "제일 좋아하는 과일은 " + fruit + "입니다.";
+        console.log(fruit);
+        break;
+        case "바나나" :
+        txt.innerText = "제일 좋아하는 과일은 " + fruit + "입니다.";
+        console.log(fruit);
+        break;
+        case "망고" :
+        txt.innerText = "제일 좋아하는 과일은 " + fruit + "입니다.";
+        console.log(fruit);
+        break;
+        default :
+        txt.innerText = "좋아하는 과일이 없습니다."
+
+
+      }
+
+    </script>
+
+  </body>
+</html>
