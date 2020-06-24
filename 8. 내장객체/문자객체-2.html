@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>문자객체</title>
+  </head>
+  <body>
+    <script>
+      let string = "Hello Thank you good luck to you";
+
+      document.write(string.charAt(16), "<br>");
+      document.write(string.indexOf("you"),"<br>");
+      document.write(string.indexOf("you",16),"<br>");
+      document.write(string.lastIndexOf("you"),"<br>");
+      document.write(string.lastIndexOf("you",25),"<br>");
+
+      document.write(string.match('luck'),'<br>');
+      document.write(string.search('you'),'<br>');  // indexOf와 동일
+      document.write(string.substr(21,4),'<br>');  //document.write(string.substr(시작인덱스번호,자를 개수),'<br>');
+      document.write(string.substring(6,12),'<br>'); // index 6번에서 12번까지 추출
+
+      document.write(string.replace("you","me"),"<br>");
+      document.write(string.toLowerCase(),"<br>");
+      document.write(string.toUpperCase(),"<br>");
+      document.write(string.length,"<br>");
+
+    </script>
+  </body>
+</html>

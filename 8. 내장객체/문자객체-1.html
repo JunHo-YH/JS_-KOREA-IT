@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>문자객체</title>
+  </head>
+  <body>
+    <script>
+      var string = "Hello Thank you good luck to you";
+      console.log(string);
+      var string = "Hello2";
+      console.log(string);
+
+      function test() {
+        var string = "hello111";
+        return string;
+      }
+      console.log(test());
+      console.log(string);
+
+
+      // let은 block단위로 들어간다.
+      let string2 = "hello";
+      if (true) {
+        let string2 = "hello222"
+        console.log(string2);
+      }
+      console.log(string2);
+/*
+      // var로 변수를 만들면 마지막에 정해준 값으로 초기화 되지만
+      // let으로 설정해주면 변수 이름을 중복할 수 없다.
+      // let으로 설정한 변수의 값을 변경해주고 싶다면
+      // let 을 지우고 변수 이름만 설정해서 바꿔줄 수 있다.
+      let string2 = "hello";
+      console.log(string2);
+      string2 = "hello2";
+      console.log(string2);
+
+      // const는 설정한 변수의 값을 변경할 수 없게 만들어준다.
+      const string3 = "hello3";
+      console.log(string3);
+      console.log(string3);
+      // string3 = "hello4";
+*/
+    </script>
+
+
+
+  </body>
+</html>
