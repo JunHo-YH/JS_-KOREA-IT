@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>for문을 이용해서 평균 구하기</title>
+  </head>
+  <body>
+    <script>
+      var total = 0;
+      var subject = ["국어", "수학", "영어"]
+      function avg() {
+        for(var i=0; i<subject.length; i++) {
+          subject[i] = Number(prompt(subject[i] + "성적을 입력하세요"));
+          // 종종 Number을 넣지 않고 prompt값만 받아서 값이 이상하게 나오는 경우가 잦다 ㅠㅠ
+          // Number, parseInt 상황에 따라서 까먹지 말고 잘 쓰자 !!
+
+          total = subject[i] + total;
+        }
+        var average = total / subject.length;
+        return document.write(average);
+      }
+
+      avg();
+    </script>
+  </body>
+</html>

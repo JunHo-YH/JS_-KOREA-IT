@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>for 반복문</title>
+  </head>
+  <body>
+    <script>
+      var sum = 0;
+      for(var i = 0; i <3; i++) {
+        var num = Number(prompt("값을 입력하세요",""));
+        // 문자열을 숫자로 바꿔줄 수 있는 것은 parseInt와 Number가 있는데, parseInt는 실수형도 정수로 바꾸기 때문에, Number로 했다.
+        sum = sum + num;
+      }
+      document.write('입력값의 총 합은' + sum + '입니다.');
+
+    </script>
+  </body>
+</html>

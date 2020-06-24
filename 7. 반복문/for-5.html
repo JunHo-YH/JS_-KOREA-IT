@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배열을 활용한 반복문</title>
+  </head>
+  <body>
+    <script>
+      function fruit() {
+        return ['apple', 'strawberry', 'watermelon']
+      }
+      console.log(fruit()[0])
+
+      var fruit = fruit();
+      for(var i=0; i<fruit.length; i++) {
+        document.write(fruit[i].toUpperCase() + "<br>");
+        document.body.style.fontSize = '50px';
+      }
+
+      //toUpperCase : 소문자를 대문자로 만들어주는 함수
+    </script>
+
+  </body>
+</html>
