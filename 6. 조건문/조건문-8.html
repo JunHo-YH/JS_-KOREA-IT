@@ -21,9 +21,9 @@
     <script>
 
       var num = 1;
-      var direct = 1;
+      var direct = 1;     // 1 == true  0 == false
       function gallery(direct) {
-        if (direct) {
+        if (direct) { // direct == 1이기 때문에 true ==> 조건식이 참이라서 if문이 실행된다 !
         if(num >= 9) return;
         num++;
       }else {
