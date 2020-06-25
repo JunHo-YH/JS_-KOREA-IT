@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>변수종류</title>
+  </head>
+  <body>
+    <script>
+      var test1 = "hello1";
+      if ( true ) {
+        var test1 = "hello111111";
+      }
+      console.log(test1); // => hello111111
+
+
+
+      // let은 변수 이름을 중복할 수 없다.
+      // let은 블럭({})단위로 적용된다.
+      let test2 = "hello2";
+      if ( true ) {
+        let test2 = "hello22222";
+        console.log(test2);
+      }
+      console.log(test2);
+
+      const test3 = "hello3";
+      // test3 = "hello33"  ==> const는 변수를 한 번 정의하면 값을 변경할 수 없다.
+      if ( true ) {
+        const test3 = "hello33333";
+        console.log(test3);
+      }
+      console.log(test3);
+
+      //함수 이름과 변수 이름을 갖게 하면 에러가 발생한다.
+      var test4 = "hello4";
+      function test5() {
+        var test4 = "hello44444";
+      }
+      test5();
+      console.log(test4);
+
+    </script>
+  </body>
+</html>
