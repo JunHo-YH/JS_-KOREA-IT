@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Date Exapmple</title>
+  </head>
+  <body>
+    <h1>Javascript Date Example</h1>
+    <p id="time-result"></p>
+    <script type="text/javascript">
+      var d = new Date();
+      var currentDate = d.getFullYear() + '년 ' + (d.getMonth() + 1 ) + '월' + d.getDate() + '일';
+      var currentTime = d.getHours() + '시 ' + d.getMinutes() + '분 ' + d.getSeconds() + '초';
+      var result = document.getElementById("time-result");
+      result.innerHTML = '오늘 날짜는' + currentDate + ', 시간은 ' + currentTime + '입니다.';
+    </script>
+
+  </body>
+</html>

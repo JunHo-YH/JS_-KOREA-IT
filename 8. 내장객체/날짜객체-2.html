@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>시간계산</title>
+  </head>
+  <body>
+    <script>
+      // 현재날짜
+      let today = new Date();
+
+      //생일
+      let birthday = new Date(1995, 7, 29);
+
+      console.log(today, birthday);
+
+      // 현재날짜 - 생일  = 내가 며칠 동안 살아왔는지 계산
+      //(60 * 60 * 24 * 1000) = 하루
+      let interval = Math.floor((today-birthday) / (60 * 60 * 24 * 1000));
+      console.log(interval);
+
+
+
+      // 올해 말일까지 남은 날짜 계산
+      let lastDay = new Date(2020, 11, 31);
+
+      let left = Math.ceil((lastDay - today) / (60 * 60 * 24 * 1000));
+      //Math.ceil로 해줘야 마지막 날이 1일로 남았다고 출력이 된다.
+      document.write("현재일로 부터 올해 말일까진 " + left + '일 남았습니다.');
+    </script>
+
+  </body>
+</html>

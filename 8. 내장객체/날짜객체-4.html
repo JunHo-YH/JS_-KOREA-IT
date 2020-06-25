@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Date Exapmple</title>
+    <style>
+      h1 { text-align: center;
+            font-size: 50px;}
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      function clock() {
+      let heading = document.querySelector('h1');
+      let today = new Date();
+      let nowHours = today.getHours();
+      let nowSecond = today.getSeconds();
+      let nowMinute = today.getMinutes();
+
+      heading.innerHTML = nowHours + " : " + nowMinute + " : " + nowSecond;
+      }
+      clock(); // 함수를 호출하지 않고 바로 setInterval을 하게되면 1초 후에 나타난다.
+      setInterval(clock, 1000);
+      // 1000 = 1초, 1초마다 함수를 실행하시오!
+    </script>
+
+  </body>
+</html>

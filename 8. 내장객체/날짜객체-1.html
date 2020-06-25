@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>날짜객체</title>
+  </head>
+  <body>
+    <script>
+      var today = new Date();
+      document.write(today, "<br>");
+
+      var nowMonth = today.getMonth(); //현재 월을 반환한여 1적게 나온다.
+      var nowDate = today.getDate(); //현재 일자를 반환합니다.
+      var nowDay = today.getDay(); // 현재 요일을 반환합니다. (0: 일요일 ~ 6: 토요일)
+      document.write('현재 월:' + nowMonth, "<br>");
+      document.write('현재 일:' + nowDate,"<br>");
+      document.write('현재 요일:' + nowDay,"<br>");
+
+      let mday = new Date(2002, 4, 31 ); //2002-5-31
+      document.write(mday,"<br>");
+
+      var theYear = mday.getFullYear();
+      var theMonth = mday.getMonth() + 1;
+      // 문자로는 May로 출력이 되지만 그 May를 숫자로 반환하면 1만큼 적게 나오기 때문에 +1을 해줘야한다.
+      var theDate = mday.getDate();
+      var theDay = mday.getDay();
+      document.write(theYear + "년도 월드컵은: " + theMonth + '월' + theDate + '일입니다.');
+
+
+
+    </script>
+
+  </body>
+</html>
