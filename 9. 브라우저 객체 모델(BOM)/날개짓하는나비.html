@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>날개짓 반복</title>
+    <style>
+      body { background: #000; }
+      img {width: 200;}
+    </style>
+  </head>
+  <body>
+    <img src="images/nabi_1.png" alt="날개짓 하는 나비">
+    <script>
+      var nabi = document.getElementsByTagName('img')[0];
+      var num = 1;
+      function wing() {
+        if (num == 6) {
+          num = 0;         // num == 0 이 되어야 20번 라인에서 num++하고 난 뒤 이미지가 1부터 다시 시작된다.
+        }
+        num++;
+      nabi.setAttribute("src", "images/nabi_"+ num +".png");
+
+    }
+    setInterval(wing, 50);
+
+    </script>
+
+  </body>
+</html>
