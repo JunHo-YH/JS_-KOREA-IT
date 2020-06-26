@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title> location 객체 </title>
+        <script>
+           console.log( location.href );
+           console.log( location.protocol );
+           console.log( location.hostname );
+           console.log( location.host );
+           console.log( location.port );
+           console.log( location.pathname );
+           setTimeout(function(){
+             location.href = "https://www.naver.com"
+           }, 3000)
+        </script>
+    </head>
+    <body>
+        <p>3초뒤에 네이버로 이동합니다</p>
+    </body>
+</html>
