@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dom(Document Object Model)</title>
+  </head>
+  <body>
+    <ul>
+      <li id = 'first'>HTMl</li>
+      <li class = 'second'>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <ol>
+      <li id="third">HTMl</li>
+      <li class="list">CSS</li>
+      <li class="list">JavaScript</li>
+    </ol>
+    <script>
+      var ul = document.getElementsByTagName('ul')[0];
+      var li = document.getElementsByTagName('li');
+      var ol = document.getElementsByTagName('ol')[0];
+      li[0].style.color = "rgb(227, 51, 204)"
+      li[5].style.color = "#7564a4"
+
+      ol.getElementsByTagName('li')[0].style.color = "#f00";
+
+      var first = document.getElementById('first');
+      first.style.color = "#5b00a2";
+
+      var second = document.getElementsByClassName('second');
+      second[0].style.color = "#78e320"
+      // 요소가 여러개일 경우에는 인덱스 번호를 넣어준다.
+
+      var third = document.querySelector('#third');
+      third.style.background = "#e9f0af";
+
+      //querySelector를 사용할 경우에는 첫번째 클래스만 선택되기 때문에 인덱스 번호를 붙여줄 필요가 없다.
+      var list1 = document.querySelector('.list');
+      list1.style.backgroundColor = "ff6fd2";
+
+
+      //querySelectorAll을 사용할 경우 클래스가 여러개이기 때문에, 인덱스 번호를 붙여줘야 한다.
+      var list2 = document.querySelectorAll('.list');
+      list2[1].style.background = "#b4dfec"
+    </script>
+  </body>
+</html>
