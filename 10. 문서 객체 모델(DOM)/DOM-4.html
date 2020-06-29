@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>사용자 입력창</title>
+    <style>
+    #target { font-size: 50px; color: #laab5d;}
+    </style>
+  </head>
+  <body>
+    <div id="target">
+      <script>
+        // var name = prompt("이름을 입력하세요","")
+        // alert("Hello!" + name);
+        //
+        // name1 = document.querySelector('#target');
+        // name1.innerHTML = name;
+
+
+        var target = document.querySelector('#target');
+        var name = prompt("이름을 입력하시오");
+        alert("Hello! " + name);
+        // target.innerText = name;
+
+        target.innerHTML = "<h1>" + name + "</h1>";
+
+      </script>
+    </div>
+
+  </body>
+</html>

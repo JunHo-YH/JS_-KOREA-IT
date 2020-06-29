@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>속성제어</title>
+    <style>
+        .style1 { color: red; }
+        .style2 { color: blue; }
+    </style>
+</head>
+<body>
+    <div id="target1" class="target2"></div>
+    <div class="style1">클래스변경하기</div>
+    <img src="nabi_1.png" alt="나비">
+    <script>
+        var target = document.querySelector('#target1')
+        var attName = target.getAttribute("class")
+        target.innerText = attName;
+        // target.setAttribute('id', "target");
+        target.id = "target"
+
+        var nabi = document.querySelector('img');
+        // nabi.setAttribute('src', 'nabi_4.png')
+        nabi.src = "nabi_4.png"
+
+        target.removeAttribute('id')
+
+        var div2 = document.getElementsByTagName('div')[1];
+        // div2.style.color = "blue"
+        div2.setAttribute("class" , "style2")
+
+    </script>
+</body>
+</html>
