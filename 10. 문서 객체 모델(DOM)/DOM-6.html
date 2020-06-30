@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>부모노드 / 자식노드</title>
+</head>
+<body>
+  <div>
+     <h1>선호하는 음식</h1>
+     <div id="food_1">
+        <h2 id="title">한식</h2>
+        <ol>
+           <li><a href="#">김치</a></li>
+           <li>불고기</li>
+           <li>비빔밥</li>
+        </ol>
+     </div>
+     <div id="food_2">
+        <h2>양식</h2>
+        <ol id="list">
+           <li>돈까스</li>
+           <li id="pizza">피자</li>
+           <li>파스타</li>
+        </ol>
+     </div>
+  </div>
+  <script>
+      var heading = document.getElementsByTagName('h1')[0];
+      heading.style.color = "green";
+      var heading2 = document.querySelectorAll('h2');
+      for ( var i=0; i<heading2.length; i++){
+        heading2[i].style.color = "red"
+      }
+      var food1List = document.getElementById('food_1').getElementsByTagName('li');
+      console.log(food1List);
+
+      var ol = document.getElementById('list');
+      // ol.firstChild.nextSibling.style.color = "green";
+      // ol.childNodes[1].style.color = "green"
+      ol.children[0].style.color = "green"
+
+      // ol.parentNode.style.backgroundColor = "yellow"
+      ol.parentElement.style.backgroundColor = "yellow"
+
+  </script>
+</body>
+</html>

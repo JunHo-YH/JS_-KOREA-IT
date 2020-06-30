@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>부모노드 / 자식노드</title>
+</head>
+<body>
+  <div id="wrap">
+     <p>내용1</p>
+     <p>내용2</p>
+     <p>내용3</p>
+     <p>내용4</p>
+     <a href="#" id="goLink">내용5</a>
+  </div>
+  <script>
+    var wrap = document.getElementById("wrap")
+    // wrap.firstChild.nextSibling.nextSibling.nextSibling.style.color="red";
+
+    var tagDiv = wrap.nodeType; // 1반환
+    var tagDivChild = wrap.firstChild.nodeType; // 3반환
+    var tagA = document.getElementById('goLink').getAttributeNode('href').nodeType; // 2반환
+    console.log(tagDiv, tagDivChild, tagA)
+
+    for ( var name in Node ){
+       console.log(name, Node[name]);
+    }
+
+    var p = document.getElementsByTagName("p")[1];
+    var nextObj=p.nextSibling;
+    while ( nextObj.nodeType != 1 ) {
+        nextObj=nextObj.nextSibling;
+    }
+    nextObj.style.backgroundColor="yellow";
+
+  </script>
+</body>
+</html>

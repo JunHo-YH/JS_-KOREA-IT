@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>일괄 적용</title>
+  </head>
+  <body>
+    <ul id="list1">
+      <li class="child1">HTML</li>
+      <li class="child1">CSS</li>
+      <li class="child1">JavaScript</li>
+    </ul>
+    <ol id="list2">
+      <li class="child2">HTML</li>
+      <li class="child2">CSS</li>
+      <li class="child2">JavaScript</li>
+    </ol>
+    <script>
+      var ul = document.getElementById('list1');
+      ul.style.color = "blue";
+
+      var ulChild = document.getElementsByClassName('child1');
+      // ulChild[0].style.backgroundColor = "yellow"
+      for(var i = 0; i < ulChild.length; i++) {
+        ulChild[i].style.backgroundColor = "yellow"
+        ulChild[i].style.border = "1px solid black"
+
+      }
+
+      // var olChild = document.querySelector(".child2");
+      // olChild.style.background = "orange"
+      // querySelector는 인덱스 번호를 지정할 수 없다.
+
+      var olChild = document.querySelectorAll(".child2");
+      olChild[2].style.background = "orange"
+
+
+
+    </script>
+  </body>
+</html>
