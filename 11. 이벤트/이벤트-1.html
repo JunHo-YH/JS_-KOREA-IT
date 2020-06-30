@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+  </head>
+  <body>
+    <button onclick="event1()">이벤트1</button>
+    <button>이벤트2</button>
+    <button>이벤트3</button>
+    <script>
+      var btn = document.getElementsByTagName("button"); //복수형이니까 s를 잊지 말고 써주자 !
+
+
+
+      function event1() {
+        console.log("이벤트1이 실행되었습니다.");
+      }
+
+      function event2() {
+        console.log("이벤트2가 실행되었습니다.");
+      }
+
+      function event3() {
+        console.log("이벤트3이 실행되었습니다.");
+      }
+
+       // btn[1].onclick = function() {
+       //  event2()  매개변수가 들어갈 때는 이 방법으로 사용한다.
+       //  }
+
+      btn[1].onclick = event2;
+      btn[2].addEventListener("click", function() { event3() })
+
+
+    </script>
+
+  </body>
+</html>

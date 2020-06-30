@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+    <style>
+      img { position: absolute; }
+    </style>
+  </head>
+  <body>
+    <img src="images/strawberry.png" alt="딸기">
+    <script>
+      var imgTag = document.querySelector('img');
+      document.onmousemove = function() {
+        imgTag.style.left = (event.clientX+10) + "px";
+        imgTag.style.top = event.clientY + "px";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+    <style>
+        div { width: 200px; height: 200px;
+              padding: 50px;
+              border: 1px solid #000;
+              background: #c5ebb8; }
+        p { width: 200px; height: 200px; margin: 0;
+            border: 1px solid #000;
+            background: #f6d95f; }
+      span { font-size: 50px; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>클릭하세요!!</p>
+    </div>
+    <span>카운팅</span>
+    <script>
+      var divTag = document.querySelector('div');
+      var pTag = document.querySelector('p');
+      var span = document.querySelector('span');
+      var num = 0;
+      function counting() {
+        num++;
+        span.innerText = num;
+        event.stopPropagation();
+      }
+      divTag.onclick = counting;
+      pTag.onclick = counting;
+
+    </script>
+  </body>
+</html>

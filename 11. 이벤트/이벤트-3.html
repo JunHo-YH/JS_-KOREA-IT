@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+  </head>
+  <body>
+    <p>이벤트를 실행하여 모양을 바꾸시오</p>
+    <script>
+      var pTag = document.querySelector('p');
+      // pTag.onmouseover = function() {
+      //   pTag.style.background = "#d4eb67";
+      // }
+      // pTag.addEventListener('mouseout', function() {
+      //   pTag.style.background = "#fff";
+      // })
+      pTag.onmousedown = function() {   // mousedown 클릭 했을 때
+        pTag.style.color = "#fff";
+      }
+      pTag.addEventListener('mouseup', function() { // mouseup = 마우스를 땠을 때
+        pTag.style.color ="blue";
+      })
+
+      // pTag.ondblclick = function() {
+      //   if ( pTag.style.border == "0px") {
+      //     pTag.style.border = "3px solid black";
+      //   }else {
+      //     pTag.style.border = "0px";
+      //   }
+      // }
+
+      var n = 1;
+      pTag.ondblclick = function() {
+        if (n == 1) {
+          pTag.style.border = "3px solid black";
+          n = 0;
+        }else {
+          pTag.style.border = "0px";
+          n = 1;
+        }
+      }
+
+
+
+
+    </script>
+
+  </body>
+</html>
