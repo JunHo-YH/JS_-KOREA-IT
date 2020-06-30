@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>객체의 추가/삭제</title>
+    <style>
+      .newDiv { border: 1px solid #000; background: #dafa6f; }
+    </style>
 </head>
 <body>
   <div id="parent">
-    <h1>객체</h1>
-    <button>객체추가하기</button>
 
+    <h1>객체</h1>
+    <button >객체 생성/추가/삭제</button>
   </div>
   <script>
-      var parent = document.getElementById('parent');
-      var newDiv = document.createElement("div");
-      newDiv.setAttribute("class", "newDiv");
-      newDiv.innerText = "새로 생성된 DIV입니다"
-      
+      function make() {
+        var parent = document.getElementById('parent');
+        var heading = document.querySelector('h1');
+        var newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "newDiv");
+        newDiv.innerText = "새로 생성된 DIV입니다";
+        // console.log(newDiv);
+        // newDiv.style.backgroundColor = "#e7f545";
+        parent.appendChild(newDiv)
+        newDiv.onclick = function() {
+          // var pa = newDiv.parentElement;
+          var pa = this.parentElement;
+          parent.removeChild(this); // this는 함수 객체 자기 자신을 가리킨다.
+          //parent.removeChild(newDiv);
+          parent.insertBefore(newDiv, heading)
+        }
 
+
+      }
+      var btn = document.querySelector("button");
+      btn.onclick = make;
 
   </script>
 </body>
