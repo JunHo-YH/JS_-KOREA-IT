@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+  </head>
+  <body>
+    <a href="http://www.naver.com">네이버이동여부</a>
+    <form>
+      <fieldset>
+        <input type="checkbox" id="bread">빵(체크됨)<br>
+        <input type="checkbox" id="drink">술(체크안됨)
+      </fieldset>
+    </form>
+    <script>
+      var aTag = document.querySelector('a');
+      var input = document.querySelectorAll('input');
+
+      function move() {
+          var ret = confirm("네이버로 이동하시겠습니까?")
+          return ret;
+      }
+      aTag.onclick = move;
+
+
+      input[1].onclick = function() {
+        event.preventDefault(); // 실행할 수 없게 만든다.
+      }
+
+    </script>
+  </body>
+</html>

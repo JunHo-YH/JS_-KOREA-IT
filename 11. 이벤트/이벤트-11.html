@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+  </head>
+  <body>
+    <h1>카운팅장소</h1>
+    <script>
+        var num = 0;
+        var heading = document.querySelector("h1");
+
+        function counting() {
+          num++;
+          heading.innerText = num;
+        }
+        window.onresize = counting
+
+    </script>
+  </body>
+</html>

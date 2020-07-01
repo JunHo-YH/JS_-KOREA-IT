@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+  </head>
+  <body>
+
+    <script>
+      function moveSite() {
+        alert("창을 닫은 후 2초 뒤에 네이버로 이동합니다");
+        setTimeout(function() {
+          location.href="http://naver.com"
+        }, 2000)
+      }
+      window.onload = moveSite;
+    </script>
+  </body>
+</html>

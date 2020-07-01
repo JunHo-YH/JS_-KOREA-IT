@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+    <style>
+      body { height: 2000px; margin: 0; }
+      div { height: 500px; background: #bbe2e6 }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+        // window.scrollY || window.pageYOffset 스크롤 위치값
+        function bgColorChange() {
+          if ( window.scrollY >= 500 ) {
+            document.body.style.background = "#ddb6f0";
+          }
+          else {
+            document.body.style.background = "#fff";
+          }
+        }
+        window.onscroll = bgColorChange;
+    </script>
+  </body>
+</html>

@@ -5,11 +5,18 @@
     <title>이벤트 실행방법</title>
   </head>
   <body>
-    <a href="http://naver.com">
+    <a href="http://www.naver.com">
       <img src="images/apple.png" alt="사과">
     </a>
     <script>
+      var aTag = document.querySelector('a');
 
+      aTag.addEventListener('click', function() {
+        this.firstChild.nextSibling.setAttribute("src", "images/banana.png")
+        // this.children[0].setAttribute("alt", "바나나")
+        this.childNodes[1].setAttribute("alt", "바나나");
+        event.preventDefault();
+      })
 
     </script>
   </body>

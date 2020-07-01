@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+    <style>
+      div { height: 300px; border: 2px solid #000;
+            font-size: 100px; }
+    </style>
+  </head>
+  <body>
+    <div>색상바꾸기</div>
+    <script>
+      var div = document.querySelector('div');
+      function colorChange() {
+        // var color = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+        // var num1 = color[Math.floor(Math.random() * color.length)]
+        // var num2 = color[Math.floor(Math.random() * color.length)]
+        // var num3 = color[Math.floor(Math.random() * color.length)]
+        var color = "#"+Math.round(Math.random() * 0xFFFFFF).toString(16)
+
+        if ( event.wheelDelta < 0 ) {
+          // div.style.background = "#"+num1+num2+num3;
+          div.style.background = color;
+        }
+        else {
+          // div.style.color = "#"+num1+num2+num3;
+          div.style.color = color;
+        }
+      }
+      div.onwheel = colorChange;
+
+    </script>
+  </body>
+</html>

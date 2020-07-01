@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 실행방법</title>
+    <style>
+    div { width: 3000px; height: 2000px; }
+    h1 { position: fixed; top: 10px; left: 10px;}
+
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>카운팅장소</h1>
+    </div>
+    <script>
+        var num = 0;
+        var heading = document.querySelector("h1");
+
+        function counting() {
+          num++;
+          heading.innerText = num;
+        }
+        window.onscroll = counting;
+
+        // window.scrollBy(200, 500);   // 상대값 ( 현재위치에서 움직이기)
+        window.scrollTo(200, 500);      // 절대값 (괄호안의 값으로 움직이기)
+
+
+    </script>
+  </body>
+</html>
