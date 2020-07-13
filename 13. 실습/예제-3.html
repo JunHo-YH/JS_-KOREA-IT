@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box { position: absolute; top: 50px;
+              width: 100px; height: 100px; background: #fcc;
+              transition: 1s;}
+    </style>
+</head>
+<body>
+    <button id="btn">플레이</button>
+    <div id="box"></div>
+    <script>
+        var btn = document.querySelector('#btn');
+        var box = document.querySelector('#box');
+        var n = 0;
+        var timer;
+        var pos;
+        box.style.left = "10px";
+        function play() {
+          box.style.left = parseInt(box.style.left) + 300 + "px"
+        }
+        btn.onclick = play;
+
+    </script>
+</body>
+</html>

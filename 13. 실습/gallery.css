@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* 초기화 */
+body, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+/* gallery */
+#gallery { position: relative; width: 400px; margin: 50px auto 0; padding: 20px 50px; border: 2px solid #000; }
+#photo { width: 400px; }
+#photoWrap { overflow: hidden; width: 300px; margin: 20px auto 0; }
+#photoList { width: 800px; transition: 0.5s; }
+#photoList li { width: 100px; float: left; text-align: center; }
+/* 좌우버튼 */
+#btn_wrap a { position: absolute; bottom: 30px; font-size: 50px; color: #000; }
+.before_btn { left: 50px; }
+.next_btn { right: 50px; }

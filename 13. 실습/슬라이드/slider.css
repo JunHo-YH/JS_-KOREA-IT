@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* 초기화 */
+body, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+/* slider */
+#slider { position: relative; width: 400px; margin: 50px auto 0;
+          padding: 50px 100px; border: 5px solid #000;  }
+#sliderWrap { overflow: hidden; width: 400px;   }
+#sliderList { overflow: hidden; /* width: 1200px; */ }
+#sliderList li { width: 400px; height: 400px; float: left; }
+.slider1 { background: #a3dee9; }
+.slider2 { background: #ceb7f3; }
+.slider3 { background: #e9a3ba; }
+#sliderList li a { color: #fff; font-size: 50px; }
+
+/* 좌우버튼 */
+#btnWrap a { position: absolute; top: 50%; font-size: 24px; color: #000; }
+.prev { left: 30px; }
+.next { right: 30px; }
+
+/* 번호버튼 */
+#btnNum { width: 120px; margin: 20px auto 0; }
+#btnNum span { display: block; width: 20px; height: 20px;
+              float: left; margin: 0 10px; border-radius: 50%;
+              background: #000; cursor: pointer;  }
+#btnNum .active { background: #f00; }

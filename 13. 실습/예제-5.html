@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div { width: 200px; height: 200px; background: #6cbe58; }
+    </style>
+</head>
+<body>
+    <div></div>
+    <br>
+    <button>투명버튼</button>
+    <script>
+        var div = document.querySelector('div')
+        var btn = document.querySelector('button')
+        var num;
+        btn.onclick = visual;
+        function visual() {
+            num = 0;
+            var timer = setInterval(function (){
+              num += 0.002
+              div.style.opacity = num;
+              if ( num > 1 ) clearInterval(timer)
+            }, 1)
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box { position: absolute; top: 50px;
+              width: 100px; height: 100px; background: #fcc; }
+    </style>
+</head>
+<body>
+    <button id="btn">플레이</button>
+    <div id="box"></div>
+    <script>
+        var btn = document.querySelector('#btn');
+        var box = document.querySelector('#box');
+        var n = 0;
+        var timer;
+        box.style.left = "10px";
+        function play() {
+          timer = setInterval(function () {
+            if ( box.style.left == "300px" ) {
+                   clearInterval(timer);
+                   box.style.left = "10px";
+            }
+            else {
+              box.style.left = parseInt(box.style.left) + 5 + "px";
+              console.log(box.style.left)
+            }
+          }, 10)
+        }
+        btn.onclick = play;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>눈내리는 효과</title>
+    <style>
+      body { margin: 0; background: #004a87; }
+      .snow { position: absolute; font-size: 50px; color: #fff; }
+    </style>
+  </head>
+  <body>
+    <script>
+        var snow = new Array(30);
+        var x = new Array(30);
+        var y = new Array(30);
+        var speed = new Array(30);
+        var wind = new Array(30);
+        var step = new Array(30);
+
+        function makeSnow() {
+          for ( var i=0; i<snow.length; i++){
+            x[i] = Math.floor(Math.random() * window.innerWidth - 100)
+            y[i] = Math.floor(Math.random() * window.innerHeight - 100)
+            speed[i] = Math.random()*2+2;
+            wind[i] = 1;
+            step[i] = Math.random()*0.1+0.05;
+            var divTag = "<div class='snow' id='snow"+ i +"' style='left: "+ x[i] +"px; top: "+ y[i] +"px'>*</div>"
+            document.write(divTag)
+            snow[i] =  document.getElementById("snow"+i)
+          }
+        }
+        function fallSnow() {
+          for ( var i=0; i<snow.length; i++){
+            if ( y[i] >= window.innerHeight-70 ) {
+              x[i] = Math.floor(Math.random() * window.innerWidth - 100)
+              y[i] = 0;
+              speed[i] = Math.random()*0.3+0.7;
+            }
+            y[i] += speed[i];
+            x[i] += Math.cos(wind[i]);
+            snow[i].style.top =  y[i] +"px";
+            snow[i].style.left =  x[i] +"px";
+
+            wind[i] += step[i];
+          }
+          setTimeout(fallSnow, 50)
+        }
+        makeSnow();
+        fallSnow();
+    </script>
+  </body>
+</html>

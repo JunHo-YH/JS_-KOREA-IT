@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>타자치는효과</title>
+    <style>
+      #box { margin: 50px 0 0 50px; font-size: 50px; }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var box = document.getElementById('box');
+        var cons = "Hello! JavaScript!".toUpperCase();
+        var i = 0;
+        // 문자열을 각각 인덱스로 뽑아서
+        // innerHTML로 각 문자열이 하나씩 보여지도록
+        // 시간차는 setTimeout 적용
+        function txtAni() {
+          if ( i < cons.length ) {
+            box.innerHTML += cons[i]
+            i++;
+          }
+          setTimeout(txtAni, 100)
+        }
+        setTimeout(txtAni, 1000);
+
+
+
+    </script>
+</body>
+</html>
