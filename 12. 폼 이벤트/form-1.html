@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>폼 이벤트</title>
+  </head>
+  <body>
+    <form>
+      <label>이름<input type="text" id="myName"></label><br>
+      <label>학번<input type="text" id="myNum"></label>
+    </form>
+    <script>
+      var myName = document.getElementById('myName');
+      var number = document.getElementById('myNum');
+      function focusing() {
+        if (myName.value == "") {
+          alert("이름을 입력하시오");
+        }
+          setTimeout(function() {
+            myName.focus();
+          },1)
+          myName.focus();
+      // alert("이름을 입력하시오");
+    }
+      myName.onblur = focusing;
+
+    </script>
+  </body>
+</html>
