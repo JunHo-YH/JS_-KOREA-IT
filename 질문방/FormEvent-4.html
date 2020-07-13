@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>폼 이벤트 실행 방법</title>
+        <style>
+            p { font-size: 20px; }
+        </style>
+    </head>
+    <body>
+        <form>
+            <select>
+                <option value="apple">사과</option>
+                <option value="banana">바나나</option>
+                <option value="strawberry">딸기</option>
+            </select>
+        </form>
+        <p></p>
+        <img src="images/apple.png" alt="사과">
+        <script>
+            // selectedIndex
+            // options[index].value
+            // 이미지는 width, height 명령으로 값을 출력
+            var s_option = document.querySelectorAll('select');
+            var imgTag = document.querySelector('img');
+            var pTag = document.querySelector('p');
+            for(var i = 0; i < s_option.length; i++) {
+                s_option[i].addEventListener('change', function () {
+                    imgTag.src = "images/" + this.value + ".png"
+                    imgTag.alt = document.querySelector('option[value=' + this.value + "]").text;
+                    pTag.innerText = imgTag.width + "x" + imgTag.height;
+                });
+            }
+        </script>
+    </body>
+</html>
