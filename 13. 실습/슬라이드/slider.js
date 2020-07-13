@@ -80,27 +80,21 @@ for ( let i=0; i<btnList.length; i++ ) {
   }
 }
 function autoSlider() {
-  if ( curIndex === 0 ) {
+  if (  curIndex <= sliderLen -1 ) {
+    sliderList.style.transition = "0.5s";
+    sliderList.style.transform = "translate(-"+ (sliderWidth * (curIndex + 2))+"px)";
+  }
+  if ( curIndex === sliderLen-1 ) {
     setTimeout(function() {
       sliderList.style.transition = "0s";
-      sliderList.style.transform = "translate(-"+ (sliderWidth * sliderLen) +"px)"
+      sliderList.style.transform = "translate(-"+ sliderWidth +"px)"
     }, 500)
-    curIndex = sliderLen;
+    curIndex = -1;
   }
-  --curIndex;
+  ++curIndex;
   for ( let i=0; i<btnList.length; i++ ) {
     btnList[i].setAttribute('class', '')
   }
   btnList[curIndex].setAttribute('class', 'active')
 }
-for ( let i=0; i<btnList.length; i++ ) {
-  btnList[i].onclick = function () {
-    clearInterval(timer)
-    for ( let i=0; i<btnList.length; i++) {
-        btnList[i].setAttribute('class', '')
-    }
-    this.setAttribute("class", "active");
-}
-let timer = setInterval(function() {
-  next.onclick()
-}, 2000)
+let timer = setInterval(autoSlider, 2000)
