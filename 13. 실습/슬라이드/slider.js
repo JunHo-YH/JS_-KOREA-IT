@@ -79,6 +79,28 @@ for ( let i=0; i<btnList.length; i++ ) {
     curIndex = i;
   }
 }
+function autoSlider() {
+  if ( curIndex === 0 ) {
+    setTimeout(function() {
+      sliderList.style.transition = "0s";
+      sliderList.style.transform = "translate(-"+ (sliderWidth * sliderLen) +"px)"
+    }, 500)
+    curIndex = sliderLen;
+  }
+  --curIndex;
+  for ( let i=0; i<btnList.length; i++ ) {
+    btnList[i].setAttribute('class', '')
+  }
+  btnList[curIndex].setAttribute('class', 'active')
+}
+for ( let i=0; i<btnList.length; i++ ) {
+  btnList[i].onclick = function () {
+    clearInterval(timer)
+    for ( let i=0; i<btnList.length; i++) {
+        btnList[i].setAttribute('class', '')
+    }
+    this.setAttribute("class", "active");
+}
 let timer = setInterval(function() {
   next.onclick()
 }, 2000)
