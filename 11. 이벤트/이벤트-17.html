@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>버튼으로 색상변경하기</title>
+    <style>
+        div { width: 300px; height: 300px; border: 1px solid #000; background: #fff;
+              transition: 0.5s;}
+
+              .color1 {
+                background-color: #eb2300;
+              }
+              .color2 {
+                background-color: #00f011;
+              }
+    </style>
+  </head>
+  <body>
+
+
+      <div></div>
+      <button>색상변경1</button>
+      <button>색상변경2</button>
+
+    <script>
+    window.onload = function() {
+      var btn = document.getElementsByTagName('button');
+      var divTag = document.getElementsByTagName('div')[0];
+      btn[0].addEventListener('click', function() {
+          divTag.setAttribute("class", "color1");
+      })
+
+
+      btn[1].addEventListener('click', function() {
+          divTag.setAttribute("class", "color2");
+      })
+      }
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
